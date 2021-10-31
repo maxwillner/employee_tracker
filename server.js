@@ -8,11 +8,17 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+db.query(`SELECT * FROM employees`, (err, rows) => {
+    console.log(rows);
+  });
+
+
+
+
 // catchall for any other request (not found)
 app.use((req, res) => {
     res.status(404).end();
 });
-
 
 // Start server after DB connection
 db.connect(err => {
