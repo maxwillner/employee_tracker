@@ -8,11 +8,17 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-db.query(`SELECT * FROM employees`, (err, rows) => {
-    console.log(rows);
-  });
+// db.query(`SELECT * FROM employees`, (err, rows) => {
+//     console.table(rows);
+// });
 
+// db.query(`SELECT * FROM roles`, (err, rows) => {
+//     console.table(rows);
+// });
 
+// db.query(`SELECT * FROM departments`, (err, rows) => {
+//     console.table(rows);
+// });
 
 
 // catchall for any other request (not found)
